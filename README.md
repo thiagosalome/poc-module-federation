@@ -1,0 +1,1 @@
+# poc-module-federation
