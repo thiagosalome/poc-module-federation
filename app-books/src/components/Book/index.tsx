@@ -15,7 +15,7 @@ const Book = ({ book }: BookComponentProps) => {
 
   return (
     <Flex bg='white' rounded='xl' boxShadow='1px 1px 10px #cccccc' p='2.5'>
-      <Box w='100px' h='full'>
+      <Box as='figure' w='100px' h='full'>
         <Image h='full' w='full' objectFit='cover' rounded='xl' fallbackSrc="https://via.placeholder.com/100" src={image} alt={title} />
       </Box>
       <Box ml='2'>
