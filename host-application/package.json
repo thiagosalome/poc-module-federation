@@ -9,6 +9,7 @@
     "@types/react-router-dom": "^5.1.7",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^8.1.1",
+    "dotenv-flow": "^3.2.0",
     "html-webpack-plugin": "^5.3.1",
     "ts-loader": "^9.0.2",
     "typescript": "^4.2.4",
@@ -29,7 +30,7 @@
     "react-router-dom": "^5.2.0"
   },
   "scripts": {
-    "start": "webpack serve --config ./config/webpack.dev.js",
-    "build": "webpack --config ./config/webpack.prod.js"
+    "start": "NODE_ENV=development webpack serve --config ./config/webpack.dev.js",
+    "build": "NODE_ENV=production webpack --config ./config/webpack.prod.js"
   }
 }
