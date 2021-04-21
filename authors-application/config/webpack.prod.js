@@ -12,10 +12,11 @@ module.exports = merge(common, {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, '../public/**/*'),
+          from: 'public',
           to: path.resolve(__dirname, '../dist'),
           globOptions: {
-            ignore: ['index.html']
+            dot: true,
+            ignore: ['**/index.html']
           }
         }
       ]
