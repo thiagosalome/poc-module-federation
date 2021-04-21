@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "poc-performance",
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "start": "lerna run --parallel start"
+  },
+  "workspaces": ["authors-application", "books-application", "host-application"]
+}
