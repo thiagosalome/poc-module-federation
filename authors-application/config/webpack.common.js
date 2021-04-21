@@ -26,9 +26,10 @@ module.exports = {
       name: 'authors_application', // O atributo que guarda o nome da aplicação. Será utilizado ao importar esse módulo
       filename: 'remoteEntry.js', // O atributo que guarda o nome do arquivo que você precisa carregar nas aplicações que dependem dela
       exposes: { // O atributo onde defino os módulos que irei expor na federação e como acessá-los
-        './AuthorList': './src/components/AuthorList/index.tsx'
+        './AuthorsList': './src/components/AuthorsList/index.tsx'
       },
       shared: { // O atributo define quais dependências serão compartilhadas entre as aplicações
+        ...dependencies,
         react: {
           singleton: true,
           requiredVersion: dependencies.react

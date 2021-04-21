@@ -23,8 +23,22 @@ module.exports = {
   },
   plugins: [
     new ModuleFederation({
+      name: 'application_host',
+      filename: 'remoteEntry.js',
       remotes: {
-        authors_application: 'authors_application@http://localhost:3001/remoteEntry.js'
+        authors_application: 'authors_application@http://localhost:3001/remoteEntry.js',
+        books_application: 'books_application@http://localhost:3002/remoteEntry.js'
+      },
+      shared: {
+        ...dependencies,
+        react: {
+          singleton: true,
+          requiredVersion: dependencies.react
+        },
+        'react-dom': {
+          singleton: true,
+          requiredVersion: dependencies['react-dom']
+        }
       }
     }),
     new HtmlWebpackPlugin({

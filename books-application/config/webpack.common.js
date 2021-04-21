@@ -26,9 +26,10 @@ module.exports = {
       name: 'books_application',
       filename: 'remoteEntry.js',
       exposes: {
-        './Books': './src/components/BookList/index.tsx'
+        './BooksList': './src/components/BooksList/index.tsx'
       },
       shared: {
+        ...dependencies,
         react: {
           singleton: true,
           requiredVersion: dependencies.react,

@@ -5,7 +5,7 @@ import {
   Box,
   Container,
 } from "@chakra-ui/react"
-import AuthorList from "./components/AuthorList"
+import AuthorList from "./components/AuthorsList"
 
 export const App = () => (
   <ChakraProvider theme={theme}>
