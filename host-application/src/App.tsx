@@ -5,8 +5,11 @@ import {
 } from "@chakra-ui/react"
 import Routes from "./routes"
 
-export const App = () => (
-  <ChakraProvider theme={theme}>
-    <Routes />
-  </ChakraProvider>
-)
+export const App = () => {
+  console.log('Batendo aqui')
+  return (
+    <ChakraProvider theme={theme}>
+      <Routes />
+    </ChakraProvider>
+  )
+}
