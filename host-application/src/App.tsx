@@ -6,7 +6,6 @@ import {
 import Routes from "./routes"
 
 export const App = () => {
-  console.log('Batendo aqui')
   return (
     <ChakraProvider theme={theme}>
       <Routes />
