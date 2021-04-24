@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ModuleFederation = require('webpack').container.ModuleFederationPlugin
+const DefinePlugin = require('webpack').DefinePlugin
 const dependencies = require('../package.json').dependencies
 require('dotenv-flow').config()
 
@@ -23,6 +24,9 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js']
   },
   plugins: [
+    new DefinePlugin({
+      'process.env.PUBLIC_URL': JSON.stringify('/host-application')
+    }),
     new ModuleFederation({
       name: 'application_host',
       filename: 'remoteEntry.js',
