@@ -25,7 +25,7 @@ module.exports = {
   },
   plugins: [
     new DefinePlugin({
-      'process.env.PUBLIC_URL': JSON.stringify('/host-application')
+      'process.env.PUBLIC_URL': JSON.stringify('/poc-module-federation/host-application/dist')
     }),
     new ModuleFederation({
       name: 'application_host',
